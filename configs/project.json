@@ -1,0 +1,49 @@
+{
+  "slug": "telecom-churn-defense",
+  "title": "Telecom Churn Defense",
+  "project_type": "ml",
+  "domain": "Telecom Analytics",
+  "summary": "Predict churn risk from usage, ticketing, and billing signals for proactive save workflows.",
+  "tags": [
+    "telecom",
+    "churn",
+    "retention"
+  ],
+  "accent": "#e76f51",
+  "dashboard_metrics": [
+    {
+      "label": "Model Lift",
+      "value": "81%",
+      "delta": "+6.4%"
+    },
+    {
+      "label": "Serving P95",
+      "value": "134ms",
+      "delta": "-12ms"
+    },
+    {
+      "label": "Data Freshness",
+      "value": "8h",
+      "delta": "steady"
+    }
+  ],
+  "sample_features": {
+    "engagement_score": 86,
+    "tenure_days": 222,
+    "payment_miss_count": 0,
+    "segment": "consumer",
+    "priority_flag": false
+  },
+  "sample_metrics": {
+    "acquisition": 45.8,
+    "activation": 44.0,
+    "retention": 55.6,
+    "revenue": 91.6
+  },
+  "knowledge_base": [
+    "Telecom Churn Defense is positioned as a Telecom Analytics starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Predict churn risk from usage, ticketing, and billing signals for proactive save workflows.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on telecom, churn, retention."
+  ]
+}
