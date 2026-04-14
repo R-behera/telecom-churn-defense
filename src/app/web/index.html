@@ -6,13 +6,12 @@
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <title>Telecom Churn Defense</title>
           <link rel="stylesheet" href="./styles.css">
-          <style>:root { --accent: #e76f51; }</style>
         </head>
-        <body>
-          <div class="page">
+        <body class="surface-sand">
+          <div class="page layout-rail eyebrow-outline headline-compact modules-2 hero-align-center">
             <section class="hero">
               <div class="panel hero-copy">
-                <span class="eyebrow">Predictive Application</span>
+                <span class="eyebrow" data-health>Analytics Studio</span>
                 <h1 id="project-title">Telecom Churn Defense</h1>
                 <p id="project-summary" class="lead">Predict churn risk from usage, ticketing, and billing signals for proactive save workflows.</p>
                 <ul id="project-tags" class="tag-list">
@@ -26,55 +25,90 @@
 <article class='card'><span>Data Freshness</span><strong>8h</strong><em>steady</em></article>
                 </div>
                 <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>Telecom Analytics</strong></article><article class='mini-card'><span>Interface</span><strong>FastAPI + Browser UI</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
+                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>Telecom Analytics</strong></article><article class='mini-card'><span>Application</span><strong>Analytics Studio</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
                 </div>
               </div>
             </section>
             <section class="app-grid">
-              <article class="panel module">
-                <div class="module-header">
-                  <span>Application 01</span>
-                  <h2>Scoring Workbench</h2>
-                  <p>Edit feature inputs and simulate a production prediction pass.</p>
-                </div>
-                <textarea id="score-input"></textarea>
-                <div class="button-row">
-                  <button id="run-score">Run Scoring</button>
-                  <button id="load-defaults" class="secondary" type="button">Reload Defaults</button>
-                </div>
-                <pre id="score-output"></pre>
-              </article>
-              <article class="panel module">
-                <div class="module-header">
-                  <span>Application 02</span>
-                  <h2>KPI Comparison</h2>
-                  <p>Compare current metrics against a baseline and surface the biggest movement.</p>
-                </div>
-                <textarea id="analyze-input"></textarea>
-                <div class="button-row">
-                  <button id="run-analyze">Run Analysis</button>
-                </div>
-                <pre id="analyze-output"></pre>
-              </article>
-              <article class="panel module">
-                <div class="module-header">
-                  <span>Application 03</span>
-                  <h2>Operator Brief</h2>
-                  <p>Ask for a grounded recommendation built from local project context.</p>
-                </div>
-                <textarea id="query-input" class="query-input"></textarea>
-                <div class="button-row">
-                  <button id="run-query">Run Query</button>
-                </div>
-                <pre id="query-output"></pre>
-              </article>
+              <article class="panel module js-module span-normal">
+          <div class="module-header">
+            <span>Studio 01</span>
+            <h2>Opportunity Scorecard</h2>
+            <p>Score the current opportunity shape before deciding what to prioritize next.</p>
+          </div>
+          <textarea class="js-input">{
+  &quot;features&quot;: {
+    &quot;engagement_score&quot;: 86,
+    &quot;tenure_days&quot;: 222,
+    &quot;payment_miss_count&quot;: 0,
+    &quot;segment&quot;: &quot;consumer&quot;,
+    &quot;priority_flag&quot;: false
+  }
+}</textarea>
+          <div class="button-row">
+            <button class="js-run" data-endpoint="/score" data-input-mode="json">Score Opportunity</button>
+          </div>
+          <pre class="js-output">Opportunity score and top factors will appear here.</pre>
+        </article>
+<article class="panel module js-module span-wide">
+          <div class="module-header">
+            <span>Studio 02</span>
+            <h2>Metric Storyline</h2>
+            <p>Translate KPI movement into a concise summary for product, growth, or finance stakeholders.</p>
+          </div>
+          <textarea class="js-input">{
+  &quot;metrics&quot;: {
+    &quot;acquisition&quot;: 45.8,
+    &quot;activation&quot;: 44.0,
+    &quot;retention&quot;: 55.6,
+    &quot;revenue&quot;: 91.6
+  },
+  &quot;baseline&quot;: {
+    &quot;acquisition&quot;: 42.14,
+    &quot;activation&quot;: 40.48,
+    &quot;retention&quot;: 51.15,
+    &quot;revenue&quot;: 84.27
+  }
+}</textarea>
+          <div class="button-row">
+            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Summarize Metrics</button>
+          </div>
+          <pre class="js-output">Metric storyline summary will appear here.</pre>
+        </article>
+<article class="panel module js-module span-normal">
+          <div class="module-header">
+            <span>Studio 03</span>
+            <h2>Decision Memo</h2>
+            <p>Generate the next action memo grounded in the project-specific context.</p>
+          </div>
+          <textarea class="js-input">{
+  &quot;prompt&quot;: &quot;Recommend the next best action for Telecom Churn Defense.&quot;,
+  &quot;features&quot;: {
+    &quot;engagement_score&quot;: 86,
+    &quot;tenure_days&quot;: 222,
+    &quot;payment_miss_count&quot;: 0,
+    &quot;segment&quot;: &quot;consumer&quot;,
+    &quot;priority_flag&quot;: false
+  },
+  &quot;metrics&quot;: {
+    &quot;acquisition&quot;: 45.8,
+    &quot;activation&quot;: 44.0,
+    &quot;retention&quot;: 55.6,
+    &quot;revenue&quot;: 91.6
+  }
+}</textarea>
+          <div class="button-row">
+            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Draft Memo</button>
+          </div>
+          <pre class="js-output">Decision memo will appear here.</pre>
+        </article>
             </section>
             <footer class="footer">
-              <span>Data Science + AI + LLM + RAG Portfolio</span>
+              <span>Telecom Analytics • ML • Analytics Studio</span>
               <span>telecom-churn-defense</span>
             </footer>
           </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "telecom-churn-defense", "title": "Telecom Churn Defense", "project_type": "ml", "domain": "Telecom Analytics", "summary": "Predict churn risk from usage, ticketing, and billing signals for proactive save workflows.", "tags": ["telecom", "churn", "retention"]}, "sample_features": {"engagement_score": 86, "tenure_days": 222, "payment_miss_count": 0, "segment": "consumer", "priority_flag": false}, "sample_metrics": {"acquisition": 45.8, "activation": 44.0, "retention": 55.6, "revenue": 91.6}, "sample_query": "What is the top priority recommendation?", "knowledge_base": ["Telecom Churn Defense is positioned as a Telecom Analytics starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Predict churn risk from usage, ticketing, and billing signals for proactive save workflows.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on telecom, churn, retention."], "dashboard_metrics": [{"label": "Model Lift", "value": "81%", "delta": "+6.4%"}, {"label": "Serving P95", "value": "134ms", "delta": "-12ms"}, {"label": "Data Freshness", "value": "8h", "delta": "steady"}]}</script>
+          <script id="bootstrap-data" type="application/json">{"project": {"slug": "telecom-churn-defense", "title": "Telecom Churn Defense", "project_type": "ml", "domain": "Telecom Analytics", "summary": "Predict churn risk from usage, ticketing, and billing signals for proactive save workflows.", "tags": ["telecom", "churn", "retention"]}, "app_archetype": "studio", "ui_profile": {"layout": "rail", "surface": "sand", "font_stack": "\"Space Grotesk\", \"Segoe UI\", sans-serif", "radius": 23, "shadow": 67, "eyebrow_style": "outline", "module_columns": 2, "hero_align": "center", "headline_mode": "compact"}, "app_modules": [{"label": "Studio 01", "title": "Opportunity Scorecard", "description": "Score the current opportunity shape before deciding what to prioritize next.", "endpoint": "/score", "input_mode": "json", "cta": "Score Opportunity", "prefill": "{\n  \"features\": {\n    \"engagement_score\": 86,\n    \"tenure_days\": 222,\n    \"payment_miss_count\": 0,\n    \"segment\": \"consumer\",\n    \"priority_flag\": false\n  }\n}", "hint": "Opportunity score and top factors will appear here.", "span": "normal"}, {"label": "Studio 02", "title": "Metric Storyline", "description": "Translate KPI movement into a concise summary for product, growth, or finance stakeholders.", "endpoint": "/analyze", "input_mode": "json", "cta": "Summarize Metrics", "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 45.8,\n    \"activation\": 44.0,\n    \"retention\": 55.6,\n    \"revenue\": 91.6\n  },\n  \"baseline\": {\n    \"acquisition\": 42.14,\n    \"activation\": 40.48,\n    \"retention\": 51.15,\n    \"revenue\": 84.27\n  }\n}", "hint": "Metric storyline summary will appear here.", "span": "wide"}, {"label": "Studio 03", "title": "Decision Memo", "description": "Generate the next action memo grounded in the project-specific context.", "endpoint": "/recommend", "input_mode": "json", "cta": "Draft Memo", "prefill": "{\n  \"prompt\": \"Recommend the next best action for Telecom Churn Defense.\",\n  \"features\": {\n    \"engagement_score\": 86,\n    \"tenure_days\": 222,\n    \"payment_miss_count\": 0,\n    \"segment\": \"consumer\",\n    \"priority_flag\": false\n  },\n  \"metrics\": {\n    \"acquisition\": 45.8,\n    \"activation\": 44.0,\n    \"retention\": 55.6,\n    \"revenue\": 91.6\n  }\n}", "hint": "Decision memo will appear here.", "span": "normal"}], "sample_features": {"engagement_score": 86, "tenure_days": 222, "payment_miss_count": 0, "segment": "consumer", "priority_flag": false}, "sample_metrics": {"acquisition": 45.8, "activation": 44.0, "retention": 55.6, "revenue": 91.6}, "knowledge_base": ["Telecom Churn Defense is positioned as a Telecom Analytics starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Predict churn risk from usage, ticketing, and billing signals for proactive save workflows.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on telecom, churn, retention."], "dashboard_metrics": [{"label": "Model Lift", "value": "81%", "delta": "+6.4%"}, {"label": "Serving P95", "value": "134ms", "delta": "-12ms"}, {"label": "Data Freshness", "value": "8h", "delta": "steady"}]}</script>
           <script src="./app.js"></script>
         </body>
         </html>
